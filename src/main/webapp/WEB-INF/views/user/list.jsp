@@ -4,12 +4,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-    
+   
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>List de usuários</title>
+	<title>Lista de usuários</title>
+	<spring:url var="css" value="/static/css/bootstrap.css" />
+	<link type="text/css" rel="stylesheet" href="${css }">
 </head>
 <body>
 <div class="container">
@@ -21,7 +23,7 @@
 	</div>
 	<hr>
 	
-	<div class="panel-default">
+	<div class="panel-sucess">
 		<div class="panel-heading">
 			<span> ${message == null ? '&nbsp;' : message }</span>
 		</div>

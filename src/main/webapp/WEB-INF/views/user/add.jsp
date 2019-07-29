@@ -10,6 +10,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Cadastrar usuário</title>
+<spring:url var="css" value="/static/css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="${css }">
 </head>
 <body>
 
@@ -22,16 +24,18 @@
 		</div>
 		<hr>
 		<div>
-			<spring:url value="${usuario.id == null ? '/usuario/save' : '/usuario/update'}" var="save"></spring:url>
+			<spring:url
+				value="${usuario.id == null ? '/usuario/save' : '/usuario/update'}"
+				var="save"></spring:url>
 			<form:form modelAttribute="usuario" action="${save }" method="post">
 				<form:hidden path="id"></form:hidden>
 				<div class="form-group">
-					<label for="nome">Nome:</label> <form:input path="nome"
-						class="form-control" />
+					<label for="nome">Nome:</label>
+					<form:input path="nome" class="form-control" />
 				</div>
 				<div class="form-group">
-					<label for="sobrenome">Sobrenome:</label> <form:input path="sobrenome"
-						class="form-control" />
+					<label for="sobrenome">Sobrenome:</label>
+					<form:input path="sobrenome" class="form-control" />
 				</div>
 				<div class="form-group">
 					<button type="submit" class="btn btn-primary">Confirmar</button>
